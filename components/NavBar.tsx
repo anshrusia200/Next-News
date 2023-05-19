@@ -25,7 +25,11 @@ const NavBar = () => {
             </Nav.Link>
             <NavDropdown title="Categories" id="categories-dropdown">
               {category.map((category) => (
-                <NavDropdown.Item as={Link} href={`/categories/${category}`}>
+                <NavDropdown.Item
+                  as={Link}
+                  href={`/categories/${category}`}
+                  key={category}
+                >
                   {category}
                 </NavDropdown.Item>
               ))}
